@@ -12,6 +12,8 @@ const styles = {
     "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
   sectionSubText:
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
+
+  icon: "bg-cover bg-no-repeat bg-center w-9 h-9",
 };
 
 export { styles };

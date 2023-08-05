@@ -40,6 +40,8 @@ export const navLinks = [
   },
 ];
 
+export const socials = ["email", "github", "facebook", "linkedin", "instagram"];
+
 const services = [
   {
     title: "Web Developer",
