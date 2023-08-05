@@ -1,15 +1,12 @@
 import React from "react";
-import {
-  About,
-  Contact,
-  Experience,
-  Feedbacks,
-  Hero,
-  Navbar,
-  Tech,
-  Works,
-  StarsCanvas,
-} from "../components";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Experience from "@/components/Experience";
+import Tech from "@/components/Tech";
+import Works from "@/components/Works";
+import Feedbacks from "@/components/Feedbacks";
+import Contact from "@/components/Contact";
 
 const Home = () => {
   return (
@@ -24,7 +21,6 @@ const Home = () => {
         <Works />
         <Feedbacks />
         <Contact />
-        <StarsCanvas />
       </div>
     </>
   );

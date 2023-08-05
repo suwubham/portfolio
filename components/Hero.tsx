@@ -5,24 +5,55 @@ import { Typewriter } from "react-simple-typewriter";
 import connect from "@/styles/connect.module.css";
 import { motion } from "framer-motion";
 import { socials } from "@/constants/constant";
+import {
+  ArrowDownTrayIcon,
+  ChatBubbleBottomCenterTextIcon,
+} from "@heroicons/react/20/solid";
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 40, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
-      <div
-        className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
+    <section className="w-full h-screen mx-auto flex items-center justify-center">
+      <motion.div
+        className={`flex flex-row items-start gap-5 mx-7`}
+        initial={{ opacity: 0, scale: 0.5, x: -200 }}
+        animate={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{
+          type: "spring",
+          duration: 1,
+        }}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="h-5 w-5 rounded-full bg-[#915eff]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          <div className="w-1 sm:h-80 h-96 violet-gradient" />
         </div>
         <div>
           <h1 className={`${styles.heroHeadText}`}>
-            Hi, I'm <span className="text-[#915eef]">Shubham</span>
+            Hi, I'm <span className="text-[#915eef]">Shubham Shakya</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             <Typewriter
               words={[
+                "Computer Science Student",
                 "Full Stack Web Developer",
                 "Data Science Enthusiast",
                 "Machine Learning Enthusiast",
@@ -30,7 +61,7 @@ const Hero = () => {
               loop={0}
               cursor
               cursorStyle="_"
-              typeSpeed={70}
+              typeSpeed={50}
               deleteSpeed={50}
               delaySpeed={1000}
             />
@@ -46,37 +77,52 @@ const Hero = () => {
             Feel free to explore my work and connect with me for collaborations.
           </p>
           <div className="mt-3 flex justify-between">
-            <div>Hello world</div>
-            <div className="flex items-center gap-5">
+            <motion.div
+              className="hidden sm:flex items-center justify-center gap-4"
+              variants={container}
+              initial="hidden"
+              animate="visible"
+            >
               <motion.button
-                className={`${connect.email} ${styles.icon}`}
-                whileHover={{ scale: 1.2 }}
+                className={`${styles.button} bg-[#915eef]`}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-              ></motion.button>
+                variants={item}
+              >
+                Resume
+                <ArrowDownTrayIcon className="w-5 h-5" />
+              </motion.button>
               <motion.button
-                className={`${connect.github} ${styles.icon}`}
-                whileHover={{ scale: 1.2 }}
+                className={`${styles.button} bg-[#915eef]`}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-              ></motion.button>
-              <motion.button
-                className={`${connect.linkedin} ${styles.icon}`}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              ></motion.button>
-              <motion.button
-                className={`${connect.facebook} ${styles.icon}`}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              ></motion.button>
-              <motion.button
-                className={`${connect.instagram} ${styles.icon}`}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-              ></motion.button>
-            </div>
+                variants={item}
+              >
+                Contact me
+                <ChatBubbleBottomCenterTextIcon className="w-5 h-5" />
+              </motion.button>
+            </motion.div>
+            <motion.div
+              className="flex items-center gap-5"
+              variants={container}
+              initial="hidden"
+              animate="visible"
+            >
+              {socials.map((social) => {
+                return (
+                  <motion.button
+                    className={`${connect[social]} ${styles.icon}`}
+                    whileHover={{ scale: 1.2 }}
+                    whileTap={{ scale: 0.9 }}
+                    variants={item}
+                    key={social}
+                  ></motion.button>
+                );
+              })}
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

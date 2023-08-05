@@ -14,6 +14,9 @@ const styles = {
     "sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider",
 
   icon: "bg-cover bg-no-repeat bg-center w-9 h-9",
+
+  button:
+    "py-2 px-4 rounded-full flex flex-row items-center justify-center gap-2",
 };
 
 export { styles };

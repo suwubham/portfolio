@@ -1,11 +1,13 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { logo, menu, close } from "@/assets";
+import { menu, close } from "@/assets";
+import logo from "@/assets/icons/logo.png";
 import { styles } from "@/app/style";
 import { navLinks } from "@/constants/constant";
 import { useState } from "react";
 import Link from "next/link";
+import { Squash as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -47,14 +49,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="sm:hidden flex justify-end items-center">
-            <Image
-              src={toggle ? close : menu}
-              alt="menu"
-              className="cursor-pointer w-7 h-7"
-              onClick={() => {
-                setToggle(!toggle);
-              }}
-            />
+            <Hamburger toggled={toggle} toggle={setToggle} size={25} />
 
             {toggle && (
               <div className="absolute p-6 black-gradient top-20 right-0 mx-4 my-2 z-10 rounded-xl min-w-[140px]">
