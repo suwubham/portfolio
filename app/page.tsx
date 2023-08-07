@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Tech from "@/components/Tech";
 import Works from "@/components/Works";
@@ -15,7 +15,7 @@ const Home = () => {
         <Navbar />
         <Hero />
 
-        <About />
+        <Education />
         <Experience />
         <Tech />
         <Works />

@@ -17,6 +17,8 @@ const styles = {
 
   button:
     "py-2 px-4 rounded-full flex flex-row items-center justify-center gap-2",
+
+  blur: "bg-gray-600 rounded-3xl bg-clip-padding backdrop-filter backdrop-blur-2xl bg-opacity-10 border border-gray-100-3xl",
 };
 
 export { styles };
