@@ -42,6 +42,30 @@ export const navLinks = [
 
 export const socials = ["email", "github", "facebook", "linkedin", "instagram"];
 
+export const education = [
+  {
+    name: "Kathmandu University",
+    address: "Dhulikhel, Kavre, Nepal",
+    program: "Bachelor in Computer Science",
+    duration: "2020 - Current",
+    logo: "ku",
+  },
+  {
+    name: "Glacier International College",
+    address: "Shantinagar, Kathmandu, Nepal",
+    program: "+2 Science",
+    duration: "Grade 11 and 12",
+    logo: "glacier",
+  },
+  {
+    name: "Mahendra Vidya Ashram",
+    address: "Barahisthan, Bhaktapur, Nepal",
+    program: "SEE",
+    duration: "Junior High School",
+    logo: "mva",
+  },
+];
+
 const services = [
   {
     title: "Web Developer",

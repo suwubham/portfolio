@@ -98,7 +98,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.9 }}
                 variants={item}
               >
-                Contact me
+                Contact
                 <ChatBubbleBottomCenterTextIcon className="w-5 h-5" />
               </motion.button>
             </motion.div>

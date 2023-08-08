@@ -15,6 +15,8 @@ const styles = {
 
   icon: "bg-cover bg-no-repeat bg-center w-9 h-9",
 
+  edulogo: "bg-cover bg-no-repeat bg-center",
+
   button:
     "py-2 px-4 rounded-full flex flex-row items-center justify-center gap-2",
 

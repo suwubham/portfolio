@@ -32,7 +32,7 @@ const Navbar = () => {
               Shubham <span>| Data Science Enthusianst</span>
             </p>
           </Link>
-          <ul className="list-none hidden sm:flex flex-row gap-10">
+          <ul className="list-none hidden xl:flex flex-row gap-10">
             {navLinks.map((link) => (
               <li
                 key={link.id}
@@ -48,7 +48,7 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-          <div className="sm:hidden flex justify-end items-center">
+          <div className="xl:hidden flex justify-end items-center">
             <Hamburger toggled={toggle} toggle={setToggle} size={25} />
 
             {toggle && (
