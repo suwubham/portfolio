@@ -88,6 +88,12 @@ const Hero = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 variants={item}
+                onClick={() => {
+                    window.open(
+                      'https://drive.google.com/uc?export=download&id=1z4ylt48j2TEbQllDNsChDX9idQFHxrPL',
+                      '_blank'
+                    );
+                  }}
               >
                 Resume
                 <ArrowDownTrayIcon className="w-5 h-5" />
